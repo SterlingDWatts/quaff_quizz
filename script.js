@@ -261,9 +261,20 @@ function isRightOrWrong(chosenAnswer) {
 }
 
 function showAnswer() {
+    $('input:radio').prop('checked', false);
+    $('.make-a-choice').hide();
     $('form button').fadeOut(200);
     $('.answerOne, .answer').fadeIn(400);
 
+}
+
+function checkIfClicked(chosenAnswer) {
+    if (typeof chosenAnswer === typeof 'yes') {
+        isRightOrWrong(chosenAnswer);
+        showAnswer();
+    } else {
+        $('.make-a-choice').fadeIn(200)
+    }
 }
 
 function handleCheckClick() {
@@ -271,8 +282,7 @@ function handleCheckClick() {
         event.preventDefault();
         const answerClass = ['.ans-1', '.ans-2', '.ans-3', '.ans-4'];
         const chosenAnswer = answerClass[$('input:checked').val()];
-        isRightOrWrong(chosenAnswer);
-        showAnswer();
+        checkIfClicked(chosenAnswer);
     })
 }
 

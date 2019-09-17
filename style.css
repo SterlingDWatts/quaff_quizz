@@ -90,11 +90,11 @@ h1 {
   background-attachment: fixed;
 }
 
-.answer {
+.answer, .make-a-choice {
   padding: 20px;
 }
 
-.answer h2 {
+.answer h2, .make-a-choice h2 {
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
