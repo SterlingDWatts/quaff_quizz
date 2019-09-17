@@ -178,14 +178,15 @@ function shuffleAnswers() {
 function shuffleQuestions(quizArray) {
     // shuffle the questions
     questionOrder.length = 0;
-    let count = 0
-    quizArray.forEach(questionObj => {
+    const quizCopy = quizArray.slice();
+    shuffle(quizCopy);
+    let count = 0;
+    quizCopy.forEach(questionObj => {
         if (count < 5) {
             questionOrder.push(questionObj);
         }
         count += 1;
     });
-    shuffle(questionOrder);
     const correctId = shuffleAnswers();
     $('.numOfQuestions').text('/' + questionOrder.length);
     return correctId
