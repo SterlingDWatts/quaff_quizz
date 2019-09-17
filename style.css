@@ -99,11 +99,13 @@ h1 {
   text-align: center;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #757575;
+  border-bottom: 2px solid #757575;
+  font-weight: 400;
 }
 
 blockquote {
   quotes: "\201C""\201D""\2018""\2019";
+  font-weight: 400;
 }
 
 blockquote:before {
