@@ -359,6 +359,25 @@ function handleRetakeQuiz() {
 
 // functions to allow you to select a topic
 
+function prepareQuiz(topic) {
+    // takes in a topic and returns a quiz object 
+    const topicQuiz = QUIZ.filter(question => question.category === topic)
+    return topicQuiz
+}
+
+function handleTopicClick() {
+    // listens for click and runs functions
+    $('.topic').on('click', function(event) {
+        const topic = $(this).text().toLowerCase().trim();
+        const topicQuiz = prepareQuiz(topic);
+        let id = shuffleQuestions(topicQuiz);
+        insertQuestion(id);
+        hideResults();
+        hideStartElements();
+        showQuestionElements();
+    });
+}
+
 // functions to initialize necessary functions to listen for clicks
 
 function handleQuiz() {
@@ -368,6 +387,7 @@ function handleQuiz() {
     handleCheckClick();
     handleNextClick();
     handleRetakeQuiz();
+    handleTopicClick();
 }
 
 $(handleQuiz);
