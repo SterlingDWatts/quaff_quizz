@@ -356,6 +356,9 @@ function handleRetakeQuiz() {
     });
 }
 
+
+// functions to allow you to select a topic
+
 // functions to initialize necessary functions to listen for clicks
 
 function handleQuiz() {
