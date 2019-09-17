@@ -149,6 +149,109 @@ const QUIZ = [
         correctCount: 0,
         category: "california"
     },
+
+
+    {
+        id: cuid(), 
+        question: "What is the primary role of sulfur dioxide in winemaking?", 
+        answers: [
+            {id: cuid(), answer: "To protect wine from oxygen.", correct: true},
+            {id: cuid(), answer: "To kill unwanted bacteria.", correct: false},
+            {id: cuid(), answer: "To precipitate out solids.", correct: false},
+            {id: cuid(), answer: "To prevent malolactic fermentation.", correct: false}
+        ],
+        explanation: "Sulfur dioxide is added at various points during the winemaking process, most often during fermentation and maturation, and before bottling. Sulfur has the preservative qualities needed to protect wine from oxygen. But too much SO2 may result in excess hydrogen sulfide, which leads to a rotten egg aroma. This can be so intense in a young wine that decanting is warranted. Avoiding sulfur usage entirely, however, which is common among natural wine proponents, can lead to premature spoilage.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "winemaking"
+    },
+
+
+
+    {
+        id: cuid(), 
+        question: "Name the three most important red grape varieties in Bordeaux.", 
+        answers: [
+            {id: cuid(), answer: "Cabernet Sauvignon, Merlot, and Cabernet Franc.", correct: true},
+            {id: cuid(), answer: "Merlot, Malbec, and Petite Verdot.", correct: false},
+            {id: cuid(), answer: "Cabernet Sauvignon, Carmenere, and Cabernet Franc.", correct: false},
+            {id: cuid(), answer: "Malbec, Petite Verdot, and Cabernet Franc", correct: false}
+        ],
+        explanation: "The traditional recipe for Left Bank wines calls for a Cabernet Sauvignon-dominant blend, with lesser amounts of Merlot and/or Cabernet Franc. A small percentage of Petit Verdot may be added for exotic seasoning. On the Right Bank, Merlot and Cabernet Franc are the dominant grapes, as growers historically had diculty ripening Cabernet Sauvignon in its colder clay soils. Malbec and Carmenère are rare in modern Bordeaux.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "france"
+    },
+    {
+        id: cuid(), 
+        question: "What soil in Bordeaux is most suitable for Cabernet Sauvignon?", 
+        answers: [
+            {id: cuid(), answer: "Gravel", correct: true},
+            {id: cuid(), answer: "Clay", correct: false},
+            {id: cuid(), answer: "Sand", correct: false},
+            {id: cuid(), answer: "Silt", correct: false}
+        ],
+        explanation: "In the early 17th century, Dutch tradesmen and engineers arrived to drain the marshes, revealing great beds of gravel that would become the preeminent home for Cabernet Sauvignon in France, and the world.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "france"
+    },
+    {
+        id: cuid(), 
+        question: "What is Botrytis cinerea?", 
+        answers: [
+            {id: cuid(), answer: "A mold that attacks grapes and dehydrates them.", correct: true},
+            {id: cuid(), answer: "A mildew that creates puntures which allows moisture to escape.", correct: false},
+            {id: cuid(), answer: "A fungus that feeds on the sugar of grapes", correct: false},
+            {id: cuid(), answer: "A mushroom that adds earthy charectoristics to nearby grapes.", correct: false}
+        ],
+        explanation: "In warm, humid, late summer afternoons the Botrytis cinerea (“noble rot”) mold attacks the thin-skinned grapes, dehydrating them.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "france"
+    },
+    {
+        id: cuid(), 
+        question: "In what year were the wines of the Medoc first classied?", 
+        answers: [
+            {id: cuid(), answer: "1855", correct: true},
+            {id: cuid(), answer: "1937", correct: false},
+            {id: cuid(), answer: "1782", correct: false},
+            {id: cuid(), answer: "1812", correct: false}
+        ],
+        explanation: "Bordeaux’s most famous, enduring, and debated classication dates to 1855. Napoléon III commissioned a ranking of Bordeaux’s top châteaux in advance of the Universal Exposition in Paris, a cultural celebration that would draw tourists from across Europe and the globe.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "france"
+    },
+    {
+        id: cuid(), 
+        question: "What is the primary grape in Sauternes?", 
+        answers: [
+            {id: cuid(), answer: "Semillon", correct: true},
+            {id: cuid(), answer: "Sauvignon Blanc", correct: false},
+            {id: cuid(), answer: "Cabernet Sauvignon", correct: false},
+            {id: cuid(), answer: "Merlot", correct: false}
+        ],
+        explanation: "Sémillon is the dominant grape in the sweet wines of these regions, supported by Sauvignon Blanc and Muscadelle.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "france"
+    }, 
+    {
+        id: cuid(), 
+        question: "Where in Bordeaux is Pauillac located?", 
+        answers: [
+            {id: cuid(), answer: "Haut-Medoc", correct: true},
+            {id: cuid(), answer: "Graves", correct: false},
+            {id: cuid(), answer: "The Right Bank", correct: false},
+            {id: cuid(), answer: "Entre-Deux-Mers", correct: false}
+        ],
+        explanation: "Saint-Estephe, Saint-Julien, Pauillac, and Margaux are within the Haut-Médoc and are benchmark appellations for Cabernet Sauvignon-based blends in Bordeaux.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "france"
+    }, 
 ]
 
 
@@ -278,6 +381,7 @@ function checkIfClicked(chosenAnswer) {
         isRightOrWrong(chosenAnswer);
         showAnswer();
     } else {
+        $('.make-a-choice h2').text('Please make a choice!')
         $('.make-a-choice').fadeIn(200)
     }
 }
