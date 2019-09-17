@@ -187,6 +187,8 @@ function shuffleQuestions(quizArray) {
         }
         count += 1;
     });
+    progress = 0;
+    correct = 0;
     const correctId = shuffleAnswers();
     $('.numOfQuestions').text('/' + questionOrder.length);
     return correctId
@@ -209,7 +211,10 @@ function insertQuestion(id) {
     // fill in the text for the questions and answers
     
     $('.question').text(questionOrder[progress].question);
-    $('.answer blockquote').text(questionOrder[progress].explanation)
+    $('.answer blockquote').text(questionOrder[progress].explanation);
+    $('.materialCovered').text(progress);
+    $('.correctCount').text(correct);
+
 
     // for loop to fill in the possible answers and mark the correct one
     const answerClass = ['.ans-1', '.ans-2', '.ans-3', '.ans-4']
@@ -226,7 +231,7 @@ function handleStartClick() {
     // listens to see if the start button is clicked
     // runs the functions to start the quiz
     $('.start').on('click', function(event) {
-        id = shuffleQuestions(QUIZ);
+        const id = shuffleQuestions(QUIZ);
         insertQuestion(id);
         hideStartElements();
         showQuestionElements();
@@ -334,6 +339,23 @@ function handleNextClick() {
 }
 
 
+// functions to retake the quiz
+
+function hideResults() {
+    // hides the results
+    $('.results, .topics-box').fadeOut(200);
+}
+
+function handleRetakeQuiz() {
+    // listens for the button click and runs the necassary functions
+    $('.newQuiz').on('click', function(event) {
+        let id = shuffleQuestions(QUIZ);
+        insertQuestion(id);
+        hideResults();
+        showQuestionElements();
+    });
+}
+
 // functions to initialize necessary functions to listen for clicks
 
 function handleQuiz() {
@@ -342,6 +364,7 @@ function handleQuiz() {
     handleStartClick();
     handleCheckClick();
     handleNextClick();
+    handleRetakeQuiz();
 }
 
 $(handleQuiz);
