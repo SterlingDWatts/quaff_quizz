@@ -165,9 +165,6 @@ const QUIZ = [
         correctCount: 0,
         category: "winemaking"
     },
-
-
-
     {
         id: cuid(), 
         question: "Name the three most important red grape varieties in Bordeaux.", 
@@ -252,6 +249,79 @@ const QUIZ = [
         correctCount: 0,
         category: "france"
     }, 
+
+
+
+    {
+        id: cuid(), 
+        question: "What are the two main categories of vine-training methods?", 
+        answers: [
+            {id: cuid(), answer: "Head-Training and Cordon-Training.", correct: true},
+            {id: cuid(), answer: "Vertical Shoot Positioning and Geneva.", correct: false},
+            {id: cuid(), answer: "Geneva Double Curtain and Biliteral Cordon-training.", correct: false},
+            {id: cuid(), answer: "Guyot and Spur pruned", correct: false}
+        ],
+        explanation: "Vine-training methods can be broken down into two major categories: head-training and cordon-training. Vines within the latter category require some form of support (tree, stake, pole, trellis, etc.) to brace them when they bear the additional weight of fruit",
+        seenCount: 0,
+        correctCount: 0,
+        category: "viticulture"
+    },
+    {
+        id: cuid(), 
+        question: "What is the primary purpose of vine training and pruning?", 
+        answers: [
+            {id: cuid(), answer: "To prevent canes from growing new roots and protect grapes.", correct: true},
+            {id: cuid(), answer: "To reduce canopy density to avoid underripe fruits.", correct: false},
+            {id: cuid(), answer: "To protect grapes from birds.", correct: false},
+            {id: cuid(), answer: "To aid in rot prevention.", correct: false}
+        ],
+        explanation: "To prevent canes from touching the ground and growing new roots while encouraging the canopy to develop and protect the grapes.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "viticulture"
+    },
+    {
+        id: cuid(), 
+        question: "What is veraison?", 
+        answers: [
+            {id: cuid(), answer: "Grapes begin ripening.", correct: true},
+            {id: cuid(), answer: "Bud grows into green foliage.", correct: false},
+            {id: cuid(), answer: "When the vine begins pushing energy up the vine after winter.", correct: false},
+            {id: cuid(), answer: "When the bud makes it first push out of the vine.", correct: false}
+        ],
+        explanation: "Approximately 100 days after budbreak, grapes begin ripening as the vine transfers sugar from the leaves and shoot tips to the green, unripe clusters.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "viticulture"
+    },
+    {
+        id: cuid(), 
+        question: "Place the following events in order: fruit set, harvest, budbreak, weeping, and veraison.", 
+        answers: [
+            {id: cuid(), answer: "weeping, budbreak, fruit set, veraison, and harvest.", correct: true},
+            {id: cuid(), answer: "fruit set, weeping, harvest, veraison, and budbreak.", correct: false},
+            {id: cuid(), answer: "budbreak, weeping, veraison, fruit set, and harvest.", correct: false},
+            {id: cuid(), answer: "budbreak, fruit set, veraison, harvest, and weeping.", correct: false}
+        ],
+        explanation: "The growing season can be broken down into several phases: weeping, budbreak, bloom, fruit set, veraison, and harvest. This season runs from April through October in the Northern Hemisphere and October through April in the Southern Hemisphere, with dormancy in the remaining months.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "viticulture"
+    }, 
+    {
+        id: cuid(), 
+        question: "What is a mesoclimate?", 
+        answers: [
+            {id: cuid(), answer: "The climate of an overarching region.", correct: true},
+            {id: cuid(), answer: "Zooms in to focus on the vineyard itself.", correct: false},
+            {id: cuid(), answer: "Looks at the vine's canopy.", correct: false},
+            {id: cuid(), answer: "The climate of the winery.", correct: false}
+        ],
+        explanation: "Mesoclimate zooms in to focus on the vineyard itself. Elevation, aspect, and shelter from the sun are key considerations. For example, vineyards with an east-facing exposure will receive more gentle morning sunlight and less intense afternoon sunlight than west-facing vineyards.",
+        seenCount: 0,
+        correctCount: 0,
+        category: "viticulture"
+    },
 ]
 
 
