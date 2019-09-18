@@ -312,8 +312,8 @@ const QUIZ = [
         id: cuid(), 
         question: "What is a mesoclimate?", 
         answers: [
-            {id: cuid(), answer: "The climate of an overarching region.", correct: true},
-            {id: cuid(), answer: "Zooms in to focus on the vineyard itself.", correct: false},
+            {id: cuid(), answer: "Zooms in to focus on the vineyard itself.", correct: true},
+            {id: cuid(), answer: "The climate of an overarching region.", correct: false},
             {id: cuid(), answer: "Looks at the vine's canopy.", correct: false},
             {id: cuid(), answer: "The climate of the winery.", correct: false}
         ],
