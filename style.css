@@ -38,6 +38,7 @@ footer {
   position: absolute;
   top: 10px;
   right: 10px;
+  margin: 0;
 }
 
 main {
@@ -88,6 +89,8 @@ h1 {
   ), url("images/background2.jpg");
   background-size: cover;
   background-attachment: fixed;
+  width: 100%;
+  max-width: 450px;
 }
 
 .answer, .make-a-choice {
@@ -239,10 +242,10 @@ a {
     position: static;
   }
 
-  .nav {
+  nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .quizz-square {
@@ -265,6 +268,7 @@ a {
     background-color: white;
     padding: 0px;
     min-height: 300px;
+    margin: 0 auto;
   }
 
   div.topics {
@@ -279,5 +283,41 @@ a {
 
   .topic {
     margin: 5px auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    display: flex;
+    min-height: 690px;
+  }
+
+  .quizz-square, .under-main {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .under-main {
+    min-height: 10px;
+  }
+
+  .topic, div.topics {
+    height: 120px;
+  }
+
+  div.topics {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    color: black;
+    max-width: 450px;
+    border: 1px solid #BDBDBD;
+    background-color: #B2DFDB;
+  }
+
+  footer {
+    justify-content: space-around;
   }
 }
