@@ -133,9 +133,9 @@ blockquote:after {
   text-shadow: 0 3px 10px rgba(0,0,0,.23), 0 3px 10px rgba(0,0,0,.16);
 }
 
-.fa-hand-point-up, .fa-arrow-right, .fa-sync {
+.fa-hand-point-up, .fa-arrow-right, .fa-sync, .fa-wine-glass-alt {
   color: white;
-
+  font-weight: 200;
 }
 
 .fa-check, .fa-times {
