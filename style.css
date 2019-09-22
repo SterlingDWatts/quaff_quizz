@@ -12,7 +12,7 @@ html {
 
 nav, footer {
   font-weight: 400;
-  background-color: #00796B;
+  background-color: #00675b;
   color: white;
   width: 100%;
   padding: 10px 20px;
@@ -31,7 +31,7 @@ footer {
 }
 
 .burger {
-  background-color: #00796B;
+  background-color: #00675b;
   border: none;
   font-size: 18px;
   color: white;
