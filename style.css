@@ -67,6 +67,12 @@ h1 {
   align-items: center;
 }
 
+.quizz-square button:hover, .quizz-square button:focus {
+  cursor: pointer;
+  color: #c50e29;
+  text-shadow: 0 2px 12px rgba(0,0,0,.5);
+}
+
 .start, .check-answer, .next, .newQuiz {
   background-color: #FFC10700;
   color: #FF5252;
