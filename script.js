@@ -332,7 +332,26 @@ let progress = 0
 let correct = 0
 
 
-// funtions for starting the quiz on the button press
+/*
+
+function for button pulse
+-------------------------
+
+
+function button_pulse() {
+    function pulse() {
+        $('button:submit').
+    }
+    setTimeout();
+}
+*/
+
+
+/*
+
+funtions for starting the quiz on the button press
+--------------------------------------------------
+*/
 
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -412,7 +431,11 @@ function handleStartClick() {
 }
 
 
-// functions for handling the check answer button to show results
+/*
+
+functions for handling the check answer button to show results
+--------------------------------------------------------------
+*/
 
 function addWrong(chosenAnswer) {
     $('.correctOrNot h2').text('Incorrect');
@@ -439,11 +462,11 @@ function isRightOrWrong(chosenAnswer) {
 }
 
 function showAnswer() {
-    $('input:radio').prop('checked', false);
+    // $('input:radio').prop('checked', false);
+    $('input:radio').prop('disabled', true);
     $('.make-a-choice').hide();
     $('form button').fadeOut(200);
     $('.answerOne, .answer').fadeIn(400);
-
 }
 
 function checkIfClicked(chosenAnswer) {
@@ -466,7 +489,11 @@ function handleCheckClick() {
 }
 
 
-// functions to handle the next question/see results button
+/*
+
+functions to handle the next question/see results button
+--------------------------------------------------------
+*/
 
 function hideAnswer() {
     // hides the correct/incorrect elements
@@ -485,6 +512,8 @@ function showNext() {
     hideAnswer();
     const id = shuffleAnswers();
     insertQuestion(id);
+    $('input:radio').prop('checked', false);
+    $('input:radio').prop('disabled', false);
     showQuestionElements();
 }
 
@@ -513,7 +542,11 @@ function handleNextClick() {
 }
 
 
-// functions to retake the quiz
+/*
+
+functions to retake the quiz
+----------------------------
+*/
 
 function hideResults() {
     // hides the results
@@ -531,7 +564,11 @@ function handleRetakeQuiz() {
 }
 
 
-// functions to allow you to select a topic
+/*
+
+functions to allow you to select a topic
+----------------------------------------
+*/
 
 function prepareQuiz(topic) {
     // takes in a topic and returns a quiz object 
@@ -552,7 +589,11 @@ function handleTopicClick() {
     });
 }
 
-// functions to initialize necessary functions to listen for clicks
+/*
+
+functions to initialize necessary functions to listen for clicks
+----------------------------------------------------------------
+*/
 
 function handleQuiz() {
     // run the functions needed to start 

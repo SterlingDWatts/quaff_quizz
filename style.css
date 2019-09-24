@@ -67,6 +67,10 @@ h1 {
   align-items: center;
 }
 
+label:hover, input:hover {
+  cursor: pointer;
+}
+
 .quizz-square button:hover, .quizz-square button:focus {
   cursor: pointer;
   color: #c50e29;
