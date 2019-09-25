@@ -107,8 +107,12 @@ label:hover, input:hover {
   max-width: 450px;
 }
 
-.answer, .make-a-choice {
+.answer {
   padding: 20px 20px 3em;
+}
+
+.make-a-choice {
+  padding: 3em 20px;
 }
 
 .answer h2, .make-a-choice h2 {
