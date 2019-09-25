@@ -41,6 +41,10 @@ footer {
   margin: 0;
 }
 
+html, body, main {
+  height: 100%;
+}
+
 main {
   margin-top: 20px;
   margin-bottom: 35px;
@@ -92,11 +96,11 @@ label:hover, input:hover {
 
 .under-main {
   padding-top: 300px;
-  min-height: 800px;
+  min-height: 100%;
   background-image: linear-gradient(
     rgba(255, 204, 188, 0.8),
     rgba(255, 204, 188, 0.8)
-  ), url("images/background2.jpg");
+    ), url("images/background2.jpg");
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -104,7 +108,7 @@ label:hover, input:hover {
 }
 
 .answer, .make-a-choice {
-  padding: 20px;
+  padding: 20px 20px 3em;
 }
 
 .answer h2, .make-a-choice h2 {
@@ -116,27 +120,27 @@ label:hover, input:hover {
   font-weight: 400;
 }
 
-blockquote {
-  quotes: "\201C""\201D""\2018""\2019";
-  font-weight: 400;
+blockquote p i {
+  color: #757575;
 }
 
-blockquote:before {
+blockquote .link {
+  color: #00796B;
+  text-decoration: underline;
+}
+
+blockquote .link:hover, blockquote .link:focus {
+  color: #00675b;
+  cursor: pointer;
+  text-shadow: 0 3px 10px rgba(0,0,0,.23), 0 3px 10px rgba(0,0,0,.16);
+  font-weight: 600;
+}
+
+blockquote .dash {
   color: #757575;
-  content: open-quote;
   font-size: 2em;
-  line-height: 0.1em;
+  vertical-align: -0.1em;
   margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-
-blockquote:after {
-  color: #757575;
-  content: close-quote;
-  font-size: 2em;
-  line-height: 0.1em;
-  margin-left: 0.25em;
-  vertical-align: -0.4em;
 }
 
 .fa-circle, .fa-times, .fa-check {
@@ -304,7 +308,12 @@ a {
 @media screen and (min-width: 1000px) {
   main {
     display: flex;
-    min-height: 690px;
+    height: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .quizz-square, .under-main {

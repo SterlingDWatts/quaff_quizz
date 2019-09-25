@@ -334,6 +334,21 @@ let correct = 0
 
 /*
 
+function for making the button grow
+-----------------------------------
+
+
+function growOnHoverOrFocus() {
+    $('.quizz-square button').on('hover focus', function(event) {
+        console.log('I am hovered or focused');
+        $('button .fa-circle').attr('data-fa-transform', 'grow-10')
+    })
+}
+*/
+
+
+/*
+
 funtions for starting the quiz on the button press
 --------------------------------------------------
 */
@@ -388,7 +403,7 @@ function insertQuestion(id) {
     // fill in the text for the questions and answers
     
     $('.question').text(questionOrder[progress].question);
-    $('.answer blockquote').text(questionOrder[progress].explanation);
+    $('.explanation').text(questionOrder[progress].explanation);
     $('.materialCovered').text(progress);
     $('.correctCount').text(correct);
 
@@ -591,6 +606,7 @@ functions to initialize necessary functions to listen for clicks
 function handleQuiz() {
     // run the functions needed to start 
     
+    // growOnHoverOrFocus();
     handleStartClick();
     handleCheckClick();
     handleNextClick();
