@@ -338,11 +338,11 @@ function for button pulse
 -------------------------
 
 
-function button_pulse() {
+function buttonPulse() {
     function pulse() {
-        $('button:submit').
+        $('button:submit').toggleClass('pulse');
     }
-    setTimeout();
+    setTimeout(pulse(), 50000);
 }
 */
 
@@ -461,9 +461,12 @@ function isRightOrWrong(chosenAnswer) {
     }
 }
 
-function showAnswer() {
-    // $('input:radio').prop('checked', false);
+function disableRadio() {
     $('input:radio').prop('disabled', true);
+}
+
+function showAnswer() {
+    disableRadio();
     $('.make-a-choice').hide();
     $('form button').fadeOut(200);
     $('.answerOne, .answer').fadeIn(400);
@@ -507,13 +510,17 @@ function hideQuestion() {
     $('form').fadeOut(200);
 }
 
+function enableRadio() {
+    $('input:radio').prop('checked', false);
+    $('input:radio').prop('disabled', false);
+}
+
 function showNext() {
     // displays the next question
     hideAnswer();
     const id = shuffleAnswers();
     insertQuestion(id);
-    $('input:radio').prop('checked', false);
-    $('input:radio').prop('disabled', false);
+    enableRadio();
     showQuestionElements();
 }
 
@@ -559,6 +566,7 @@ function handleRetakeQuiz() {
         let id = shuffleQuestions(QUIZ);
         insertQuestion(id);
         hideResults();
+        enableRadio();
         showQuestionElements();
     });
 }
@@ -603,6 +611,7 @@ function handleQuiz() {
     handleNextClick();
     handleRetakeQuiz();
     handleTopicClick();
+    // buttonPulse();
 }
 
 $(handleQuiz);

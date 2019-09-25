@@ -71,7 +71,7 @@ label:hover, input:hover {
   cursor: pointer;
 }
 
-.quizz-square button:hover, .quizz-square button:focus {
+.quizz-square button:hover, .quizz-square button:focus, button.pulse {
   cursor: pointer;
   color: #c50e29;
   text-shadow: 0 2px 12px rgba(0,0,0,.5);
