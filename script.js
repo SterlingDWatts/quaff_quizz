@@ -334,21 +334,6 @@ let correct = 0
 
 /*
 
-function for button pulse
--------------------------
-
-
-function buttonPulse() {
-    function pulse() {
-        $('button:submit').toggleClass('pulse');
-    }
-    setTimeout(pulse(), 50000);
-}
-*/
-
-
-/*
-
 funtions for starting the quiz on the button press
 --------------------------------------------------
 */
@@ -611,7 +596,6 @@ function handleQuiz() {
     handleNextClick();
     handleRetakeQuiz();
     handleTopicClick();
-    // buttonPulse();
 }
 
 $(handleQuiz);
