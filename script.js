@@ -393,10 +393,16 @@ function hideStartElements() {
     $('.topics-box').fadeOut(600)
 }
 
+function enableRadio() {
+    $('input:radio').prop('checked', false);
+    $('input:radio').prop('disabled', false);
+}
+
 function showQuestionElements() {
     // show the question elements
     $('form, .check-answer').fadeIn(600);
     $('.progress').fadeIn(400);
+    enableRadio();
 }
 
 function insertQuestion(id) {
@@ -510,11 +516,6 @@ function hideQuestion() {
     $('form').fadeOut(200);
 }
 
-function enableRadio() {
-    $('input:radio').prop('checked', false);
-    $('input:radio').prop('disabled', false);
-}
-
 function showNext() {
     // displays the next question
     hideAnswer();
@@ -563,10 +564,10 @@ function hideResults() {
 function handleRetakeQuiz() {
     // listens for the button click and runs the necassary functions
     $('.newQuiz').on('click', function(event) {
+        enableRadio();
         let id = shuffleQuestions(QUIZ);
         insertQuestion(id);
         hideResults();
-        enableRadio();
         showQuestionElements();
     });
 }
@@ -606,7 +607,6 @@ functions to initialize necessary functions to listen for clicks
 function handleQuiz() {
     // run the functions needed to start 
     
-    // growOnHoverOrFocus();
     handleStartClick();
     handleCheckClick();
     handleNextClick();
